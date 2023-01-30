@@ -1,0 +1,14 @@
+.img--film{
+    color: #9f9c9c;
+    margin-top: 3rem;
+}
+.img--film--item--img{
+    width: auto;
+    height: 500px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img--film--item{
+
+}

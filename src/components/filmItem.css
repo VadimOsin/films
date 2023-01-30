@@ -1,0 +1,43 @@
+.filmImg {
+    width: 100%; /* Ширина изображений */
+    height: 400px; /* Высота изображении */
+    object-fit: cover;
+}
+
+.filmBody {
+    display: flex;
+    justify-content: space-between;
+    color: #9f9c9c;
+}
+
+.filmRating {
+    background: #383737;
+    border-radius: 5px;
+    height: 1.8rem;
+    width: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.filmTitle {
+    text-align: center;
+    color: #d5d3d3;
+    margin: 0;
+    padding: 5px;
+}
+
+.filmDescriptions {
+    display: none;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    z-index: 2;
+    border-radius: 5px;
+    background: #383737;
+
+}
+
+.filmCard:hover .filmDescriptions {
+    display: block;
+
+}
