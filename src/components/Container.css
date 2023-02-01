@@ -3,4 +3,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 85%;
+}
+.container--main{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
 }

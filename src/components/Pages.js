@@ -1,6 +1,6 @@
 import React from 'react';
 import Pagination from 'react-bootstrap/Pagination';
-
+import './Pagination.css'
 const Pages = ({pageCount, active, setActivePages}) => {
 
     let pages = [];
@@ -8,7 +8,7 @@ const Pages = ({pageCount, active, setActivePages}) => {
         pages.push(number);
     }
     return (
-        <Pagination>
+        <Pagination className='pagination'>
             {pages?.map((page, index) =>
                 <Pagination.Item
                     key={page}
