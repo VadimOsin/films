@@ -1,7 +1,7 @@
 import {instance} from "./index";
 
-export const getFilms = async (page,category,raiting,year) => {
-    const {data} = await instance.get(`api/v2.2/films/?page=${page}&type=${category}&raitingTo=${raiting}${year}`)
+export const getFilms = async (page, category, raiting, year, keyword) => {
+    const {data} = await instance.get(`api/v2.2/films/?page=${page}&type=${category}&raitingTo=${raiting}${year}&keyword=${keyword}`)
     return data;
 }
 
