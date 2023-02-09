@@ -13,8 +13,8 @@ const FilmsList = () => {
     const [films, setFilms] = useState([])
     const [activePage, setActivePage] = useState(1)
     const [category, setCategory] = useState('ALL')
-    const [raiting, setRaiting] = useState(0)
-    const [year, setYear] = useState(`&yearFrom=${date - 1}&yearTo=${date - 1}`)
+    const [rating, setRating] = useState('')
+    const [year, setYear] = useState(`&yearFrom=1980&yearTo=${date}`)
     const [loading, setLoading] = useState(true)
     const [keyword, setKeyword] = useState('')
     const [search, setSearch] = useState(true)
@@ -23,13 +23,13 @@ const FilmsList = () => {
         setLoading(true)
         setSearch(true)
         setTimeout(() => {
-            getFilms(activePage, category, raiting, year, keyword).then(response => {
+            getFilms(activePage, category, rating, year, keyword).then(response => {
                 setFilms(response)
 
             }).finally(() => setLoading(false))
         }, 1000)
 
-    }, [activePage, category, raiting, year, search])
+    }, [activePage, category, rating, year, search])
 
     return (
         <>
@@ -51,7 +51,7 @@ const FilmsList = () => {
                             )}
                         </Container>
                 }
-                <SortFilms setRaiting={setRaiting} date={date} setYear={setYear}/>
+                <SortFilms setRaiting={setRating} date={date} setYear={setYear}/>
             </div>
             <Pages pageCount={films.totalPages} active={activePage} setActivePages={setActivePage}/>
         </>

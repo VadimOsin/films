@@ -1,0 +1,19 @@
+.creators--card {
+    width: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.creators--img {
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+}
+
+.creators--body {
+    color: #9f9c9c;
+}
+
+.creators--item {
+    margin: 4rem 0;
+}

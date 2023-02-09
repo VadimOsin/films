@@ -15,6 +15,7 @@ const SortFilms = ({setRaiting, date, setYear}) => {
         <div className="sortFilms">
             <Form.Text>Выберите рейтинг</Form.Text>
             <Form.Select className="sortFilm--select" onChange={(event) => setRaiting(event.target.value)}>
+                <option value=''>все</option>
                 {
                     raiting.map(r =>
                         <option key={r} value={r}>{r}</option>
@@ -23,6 +24,7 @@ const SortFilms = ({setRaiting, date, setYear}) => {
             </Form.Select>
             <Form.Text>Выберите год</Form.Text>
             <Form.Select className="sortFilm--select" onChange={(event) => setYear(event.target.value)}>
+                <option value={`&yearFrom=''&yearTo=''`}>все</option>
                 {
                     year.map(r =>
                         <option key={r} value={`&yearFrom=${r}&yearTo=${r}`}>{r}</option>

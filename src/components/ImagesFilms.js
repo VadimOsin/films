@@ -16,11 +16,11 @@ const ImagesFilms = ({id}) => {
         <div className="img--film">
             <Carousel>
                 {img?.map((i, index) =>
-                    <Carousel.Item className="img--film--item">
-                        <Image key={index}
+                    <Carousel.Item className="img--film--item" key={index}>
+                        <Image
                                src={i.previewUrl}
                                className="img--film--item--img d-block w-50"
-                               alt="Second slide"
+                               alt="slide"
                                />
                     </Carousel.Item>
                 )}

@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {getBudgetById, getFilmById} from "../axios/filmsApi";
 import './FilmPage.css'
 import ImagesFilms from "./ImagesFilms";
+import CreatorsFilms from "./creatorsFilms";
 
 const FilmPage = () => {
     const {id} = useParams()
@@ -45,11 +46,11 @@ const FilmPage = () => {
                     <div>Год:&nbsp;{film.year}</div>
                     <div>Страна:&nbsp;{film.countries?.map((country, index) =>
                         <span key={index}
-                        >{country.country}</span>
+                        >{country.country} </span>
                     )}</div>
                     <div>Жанр:&nbsp;{film.genres?.map((genre, index) =>
                         <span key={index}
-                        >{genre.genre}&nbsp;</span>
+                        >{genre.genre} </span>
                     )}</div>
                     <div>Возраст:&nbsp;{film.ratingAgeLimits?.slice(-1)}+</div>
                     <div>Рейтинг:&nbsp;{film.ratingKinopoisk}</div>
@@ -60,6 +61,7 @@ const FilmPage = () => {
                 {film.description}
             </div>
             <ImagesFilms id={id}/>
+            <CreatorsFilms id={id}/>
         </div>
     );
 };
