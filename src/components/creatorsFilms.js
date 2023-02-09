@@ -13,9 +13,9 @@ const CreatorsFilms = ({id}) => {
 
     return (
 
-        <Carousel>
+        <div className='scrolling-wrapper'>
             {creators?.map((i) =>
-                <Carousel.Item key={i.staffId} className="creators--item">
+                <div key={i.staffId} className="creators--item">
                     <Card className="creators--card">
                         <Card.Img variant="top" src={i?.posterUrl} className="creators--img"/>
                         <Card.Body className="creators--body">
@@ -27,9 +27,9 @@ const CreatorsFilms = ({id}) => {
                             <Button variant="primary">Go somewhere</Button>
                         </Card.Body>
                     </Card>
-                </Carousel.Item>
+                </div>
             )}
-        </Carousel>
+        </div>
 
     );
 };
