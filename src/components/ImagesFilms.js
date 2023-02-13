@@ -12,21 +12,25 @@ const ImagesFilms = ({id}) => {
         })
     }, [])
 
-    return (
-        <div className="img--film">
-            <Carousel>
-                {img?.map((i, index) =>
-                    <Carousel.Item className="img--film--item" key={index}>
-                        <Image
-                               src={i.previewUrl}
-                               className="img--film--item--img d-block w-50"
-                               alt="slide"
-                               />
-                    </Carousel.Item>
-                )}
-            </Carousel>
-        </div>
-    );
+    if (img?.length !== 0) {
+        return (
+            <div className="img--film">
+                <Carousel>
+                    {img?.map((i, index) =>
+                        <Carousel.Item className="img--film--item" key={index}>
+                            <Image
+                                src={i.previewUrl}
+                                className="img--film--item--img d-block w-50"
+                                alt="slide"
+                            />
+                        </Carousel.Item>
+                    )}
+                </Carousel>
+            </div>
+        );
+    } else {
+        return (<></>);
+    }
 };
 
 export default ImagesFilms;
